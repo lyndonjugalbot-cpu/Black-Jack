@@ -11,7 +11,7 @@
 
 
 import random
-from art import logo
+from art import logo, win, lose, draw
 
 #deals a random card from the deck 
 def deal_card():
@@ -42,19 +42,26 @@ def compare(user_score, computer_score):
     """Compare the final scores and return the result message."""
 
     if user_score == computer_score:
-        return "Draw"
+        #return "Draw"
+        print(draw)
     elif computer_score == 0:
-        return "Lose, opponent has Blackjack"
+        #return "Lose, opponent has Blackjack"
+        print(lose)
     elif user_score == 0:
-        return "Win with a Blackjack"
+        #return "Win with a Blackjack"
+        print(win)
     elif user_score > 21:
-        return "You went over. You lose"
+        #return "You went over. You lose"
+        print(lose)
     elif computer_score > 21:
-        return "Opponent went over. You win"
+        #return "Opponent went over. You win"
+        print(win)
     elif user_score > computer_score:
-        return "You win"
+        #return "You win"
+        print(win)
     else:
-        return "You lose"
+        #return "You lose"
+        print(lose)
 
 #play the game
 def play_game():
